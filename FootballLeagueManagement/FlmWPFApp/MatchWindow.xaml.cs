@@ -21,9 +21,11 @@ namespace FlmWPFApp
     public partial class MatchWindow : Window
     {
         IMatchRepository matchRepository;
-        public MatchWindow(IMatchRepository repository)
+        IAccountRepository caccountRepository;
+        public MatchWindow(IAccountRepository _accountrepository, IMatchRepository repository)
         {
             InitializeComponent();
+            caccountRepository = _accountrepository;
             this.matchRepository = repository;
             LoadMatches();
         }

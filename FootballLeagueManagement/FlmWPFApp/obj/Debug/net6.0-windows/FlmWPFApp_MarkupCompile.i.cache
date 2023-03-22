@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 D:\ky_7\PRN221\PRN_221\PRN_221_Goup8\FootballLeagueManagement\FlmWPFApp\App.xaml
-3645688437
+5-1613636225
 
-71222780320
+9-289097821
 233-689239008
-MainWindow.xaml;MatchWindow.xaml;RankingWindow.xaml;
+Login.xaml;MainWindow.xaml;MatchForClub.xaml;MatchWindow.xaml;RankingWindow.xaml;
 
 True
 

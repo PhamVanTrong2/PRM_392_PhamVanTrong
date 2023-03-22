@@ -7,6 +7,12 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Login.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MatchForClub.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="MatchWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -15,7 +21,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Login.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MatchForClub.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MatchWindow.xaml">
