@@ -1,0 +1,55 @@
+﻿<Window x:Class="FlmWPFApp.MatchWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FlmWPFApp"
+        mc:Ignorable="d"
+        Title="MatchWindow" Height="450" Width="800">
+    <Grid>
+        <DockPanel VerticalAlignment="Top" Margin="10">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="4*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <!--StackPanel for Label and TextBox controls-->
+                <!--StackPanel for Button controls-->
+                <StackPanel Grid.Row="1" Orientation="Horizontal"  
+                            HorizontalAlignment="Left">
+                    <Button x:Name="btnInsertMatch" Margin="5"  Width="80" Content="Insert" Click="btnInsertMatch_Click"
+                          />
+                    <Button x:Name="btnUpdateMatch"  Margin="5" Width="80"  Content="Update" Click="btnUpdateMatch_Click"
+                            />
+                    <Button x:Name="btnDeleteMatch" Margin="5"  Width="80" Content="Delete" Click="btnDeleteMatch_Click"
+                           />
+                </StackPanel>
+
+                <ListView Grid.Row="2" Name="lvMatches" Width="Auto" Height="Auto" SelectionChanged="lvMatches_SelectionChanged">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Match ID"  Width="100" 
+                                  DisplayMemberBinding="{Binding Path=MatchId }"/>
+                            <GridViewColumn Header="Host"  Width="150" 
+                                />
+                            <GridViewColumn Header="Visit"  Width="150" 
+                                />
+                            <GridViewColumn Header="Date"  Width="150" 
+                                />
+                            <GridViewColumn Header="Time"  Width="70" 
+                                />
+                            <GridViewColumn Header="Stadium"  Width="200" 
+                                />
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+                <Button Grid.Row="3" x:Name="btnClose" Margin="5"                        
+                        HorizontalAlignment="Right" VerticalAlignment="Bottom"
+                        Width="80" Content="Close" Click="btnClose_Click"/>
+            </Grid>
+
+        </DockPanel>
+    </Grid>
+</Window>
