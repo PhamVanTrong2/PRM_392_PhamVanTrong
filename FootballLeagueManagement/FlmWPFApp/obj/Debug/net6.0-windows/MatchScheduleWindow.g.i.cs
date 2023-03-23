@@ -53,7 +53,7 @@ namespace FlmWPFApp {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/FlmWPFApp;V1.0.0.0;component/matchschedulewindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/FlmWPFApp;component/matchschedulewindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\MatchScheduleWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

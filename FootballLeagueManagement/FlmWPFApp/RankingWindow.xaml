@@ -5,26 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FlmWPFApp"
         mc:Ignorable="d"
-        Title="RankingWindow" Height="450" Width="800">
+        Title="RankingWindow" Height="450" Width="1000">
     <Grid>
-        <Button x:Name="RankingLoad" Click="RankingLoad_Click"></Button>
         <ListView Grid.Row="1" Name="lvRanking" Width="Auto" Height="Auto" >
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="ClubId"  Width="100" 
-                                    DisplayMemberBinding="{Binding Path=ClubId }"/>
-                    <GridViewColumn Header="ClubName" Width="200"
+                    <GridViewColumn Header="#"  Width="70" 
+                                    DisplayMemberBinding="{Binding Path=STT }"/>
+                    <GridViewColumn Header="ClubName" Width="130"
                                     DisplayMemberBinding="{Binding Path=ClubName}"/>
-                    <GridViewColumn Header="MatchPlayed"  Width="200" 
+                    <GridViewColumn Header="Played"  Width="120" 
                                     DisplayMemberBinding="{Binding Path=MatchPlayed }"/>
                     <GridViewColumn Header="Won" Width="100"
                                     DisplayMemberBinding="{Binding Path=Won}"/>
-                    <GridViewColumn Header="Drawn"  Width="100"                                           
+                    <GridViewColumn Header="Drawn"  Width="120"                                           
                                     DisplayMemberBinding="{Binding Path=Drawn}"/>
                     <GridViewColumn Header="Lost"  Width="100"                                           
                                     DisplayMemberBinding="{Binding Path=Lost}"/>
-                    <GridViewColumn Header="GoalDifference"  Width="100"                                           
+                    <GridViewColumn Header="GF"  Width="100"                                           
+                                    DisplayMemberBinding="{Binding Path=GoalsFor}"/>
+                    <GridViewColumn Header="GA"  Width="100"                                           
+                                    DisplayMemberBinding="{Binding Path=GoalsAgainst}"/>
+                    <GridViewColumn Header="GD"  Width="100"                                           
                                     DisplayMemberBinding="{Binding Path=GoalDifference}"/>
+                    <GridViewColumn Header="Point"  Width="100"                                           
+                                    DisplayMemberBinding="{Binding Path=Point}"/>
                 </GridView>
             </ListView.View>
         </ListView>

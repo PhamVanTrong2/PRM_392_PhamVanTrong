@@ -34,6 +34,12 @@ namespace FlmWPFApp
             services.AddSingleton<RankingWindow>();
             services.AddSingleton(typeof(IMatchRepository), typeof(MatchRepository));
             services.AddSingleton<MatchWindow>();
+            services.AddSingleton(typeof(IClubRepository), typeof(ClubRepository));
+            services.AddSingleton<MatchWindow>();
+            services.AddSingleton(typeof(IStadiumRepository), typeof(StadiumRepository));
+            services.AddSingleton<MatchWindow>();
+            services.AddSingleton(typeof(IMatchResultRepository), typeof(MatchResultRepository));
+            services.AddSingleton<MatchWindow>();
             services.AddSingleton(typeof(IAccountRepository), typeof(AccountRepository));
             services.AddSingleton(typeof(IClubRepository), typeof(ClubRepository));
             services.AddSingleton<Login>();
@@ -43,7 +49,7 @@ namespace FlmWPFApp
         }
         private void OnStartup(object sender, StartupEventArgs e)
         {
-            var windowFLM = serviceProvider.GetService<Login>();
+            var windowFLM = serviceProvider.GetService<MatchWindow>();
             windowFLM.Show();
         }
     }

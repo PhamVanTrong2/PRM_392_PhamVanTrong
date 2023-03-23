@@ -14,10 +14,13 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="4*"/>
                     <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <!--StackPanel for Label and TextBox controls-->
+                
+                
                 <!--StackPanel for Button controls-->
-                <StackPanel Grid.Row="1" Orientation="Horizontal"  
+                <StackPanel Grid.Row="4" Orientation="Horizontal"  
                             HorizontalAlignment="Left">
                     <Button x:Name="btnInsertMatch" Margin="5"  Width="80" Content="Insert" Click="btnInsertMatch_Click"
                           />
@@ -27,29 +30,32 @@
                            />
                 </StackPanel>
 
-                <ListView Grid.Row="2" Name="lvMatches" Width="Auto" Height="Auto" SelectionChanged="lvMatches_SelectionChanged">
+                <ListView Grid.Row="2" Name="lvMatches" Width="Auto" Height="200" SelectionChanged="lvMatches_SelectionChanged">
                     <ListView.View>
                         <GridView>
-                            <GridViewColumn Header="Match ID"  Width="100" 
-                                  DisplayMemberBinding="{Binding Path=MatchId }"/>
+                            <GridViewColumn Header="Match ID"  Width="120" 
+                                DisplayMemberBinding="{Binding Path=MatchId }"/>
                             <GridViewColumn Header="Host"  Width="150" 
-                                />
-                            <GridViewColumn Header="Visit"  Width="150" 
-                                />
-                            <GridViewColumn Header="Date"  Width="150" 
-                                />
-                            <GridViewColumn Header="Time"  Width="70" 
-                                />
+                                DisplayMemberBinding="{Binding Path=Host }"/>
+                            <GridViewColumn Header="Score"  Width="150" 
+                                DisplayMemberBinding="{Binding Path=Score }"/>
+                            <GridViewColumn Header="Visit"  Width="150"
+                                DisplayMemberBinding="{Binding Path=Visit }"/>
+                            <GridViewColumn Header="Time"  Width="100" 
+                                DisplayMemberBinding="{Binding Path=PlayTime }"/>
                             <GridViewColumn Header="Stadium"  Width="200" 
-                                />
+                                DisplayMemberBinding="{Binding Path=Stadium }"/>
                         </GridView>
                     </ListView.View>
                 </ListView>
-                <Button Grid.Row="3" x:Name="btnClose" Margin="5"                        
+                <ComboBox Grid.Row="3"
+                      DisplayMemberPath="{Binding Path=PlayDate, StringFormat='{}{0:dd/MM/yyyy}'}" 
+                      Width="100"
+                          x:Name="cbDate"/>
+                <Button Grid.Row="4" x:Name="btnClose" Margin="5"                        
                         HorizontalAlignment="Right" VerticalAlignment="Bottom"
                         Width="80" Content="Close" Click="btnClose_Click"/>
             </Grid>
-
         </DockPanel>
     </Grid>
 </Window>

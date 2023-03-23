@@ -7,10 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="4*"></RowDefinition>
-        </Grid.RowDefinitions>
-        <Button Grid.Row="0" Click="Button_Click">Button</Button>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="4*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel>
+            <Button x:Name="btnMatchSchedule" Content="Match Schedule" Click="btnMatchSchedule_Click"></Button>
+            
+        </StackPanel>
     </Grid>
 </Window>

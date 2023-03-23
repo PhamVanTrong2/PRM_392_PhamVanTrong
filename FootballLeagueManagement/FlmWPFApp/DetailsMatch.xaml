@@ -30,7 +30,7 @@
                     <StackPanel  Orientation ="Vertical" 
                                 HorizontalAlignment="Center" Width="730" Margin="0,0,0,20" Grid.RowSpan="4">
                         <StackPanel.Background>
-                            <ImageBrush ImageSource="D:\ky_7\PRN221_project\final_project\FootballLeagueManagement\FlmWPFApp\image\stadium.jpg" />
+                            <ImageBrush  />
                         </StackPanel.Background>
                         <Label Name="lbTitle" Foreground="Red" FontWeight="DemiBold" 
                                FontSize="30" Content="Club Information"  />

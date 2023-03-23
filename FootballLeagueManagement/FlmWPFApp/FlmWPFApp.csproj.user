@@ -16,6 +16,9 @@
     <Compile Update="MatchForClub.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="MatchScheduleWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="MatchWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -37,6 +40,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MatchForClub.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MatchScheduleWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MatchWindow.xaml">

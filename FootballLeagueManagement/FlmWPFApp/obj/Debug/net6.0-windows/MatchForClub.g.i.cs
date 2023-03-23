@@ -69,7 +69,7 @@ namespace FlmWPFApp {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/FlmWPFApp;V1.0.0.0;component/matchforclub.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/FlmWPFApp;component/matchforclub.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\MatchForClub.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -36,7 +36,7 @@ namespace FlmWPFApp
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            String username = txtUser.Text;
+            /*String username = txtUser.Text;
             String password = txtPass.Password;
             Account m = accountRepository.Login(username, password);
             Account member = accountRepository.GetAccountByUserName(username);
@@ -52,12 +52,20 @@ namespace FlmWPFApp
 
             window.Show();
 
+
             //}
             //else if (m == null)
             //{
             //    MessageBox.Show("Email or Password incorrect", "Login");
             //}
             //Close();
+
+            }
+            else if (m == null)
+            {
+                MessageBox.Show("Email or Password incorrect", "Login");
+            }
+            Close();*/
         }
         private void btnMinimize_Click(object sender, RoutedEventArgs e)
         {
