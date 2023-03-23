@@ -163,3 +163,5 @@ D:\ky_7\PRN221\PRN_221\PRN_221_Goup8\FootballLeagueManagement\FlmWPFApp\obj\Debu
 D:\ky_7\PRN221\PRN_221\PRN_221_Goup8\FootballLeagueManagement\FlmWPFApp\obj\Debug\net6.0-windows\App.baml
 D:\ky_7\PRN221\PRN_221\PRN_221_Goup8\FootballLeagueManagement\FlmWPFApp\obj\Debug\net6.0-windows\DetailsMatch.g.cs
 D:\ky_7\PRN221\PRN_221\PRN_221_Goup8\FootballLeagueManagement\FlmWPFApp\obj\Debug\net6.0-windows\DetailsMatch.baml
+D:\ky_7\PRN221\PRN_221\PRN_221_Goup8\FootballLeagueManagement\FlmWPFApp\obj\Debug\net6.0-windows\UpdateClub.g.cs
+D:\ky_7\PRN221\PRN_221\PRN_221_Goup8\FootballLeagueManagement\FlmWPFApp\obj\Debug\net6.0-windows\UpdateClub.baml

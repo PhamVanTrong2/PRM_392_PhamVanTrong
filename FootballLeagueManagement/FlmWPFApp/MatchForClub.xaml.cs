@@ -18,6 +18,7 @@ using System.Drawing;
 using System.Windows.Navigation;
 using System.ComponentModel;
 using System.Windows.Controls.Primitives;
+using DataAccess.Repository;
 
 namespace FlmWPFApp
 {
@@ -28,9 +29,11 @@ namespace FlmWPFApp
     {
         NhaappContext context = new NhaappContext();
         readonly Club club = new();
-        public MatchForClub()
+        IClubRepository clubRepository;
+        public MatchForClub(IClubRepository _clubRepository)
         {
             InitializeComponent();
+            clubRepository = _clubRepository;
             List<Matchs> matches = new List<Matchs>();
             matches.Add(new Matchs { Team1 = "Arsenal", Score1 = "1", Team2 = "Liverpool", Score2 = "0", Minutes = 90, Time = "20/12/2022" });
             matches.Add(new Matchs { Team1 = "Arsenal", Score1 = "1", Team2 = "Everton", Score2 = "1", Minutes = 90, Time = "22/12/2022" });
@@ -55,7 +58,7 @@ namespace FlmWPFApp
         }
         private void btnRefresh_Click(object sender, RoutedEventArgs e)
         {
-            DetailsMatch dt = new DetailsMatch();   
+            DetailsMatch dt = new DetailsMatch(clubRepository);
             dt.Show();
         }
 

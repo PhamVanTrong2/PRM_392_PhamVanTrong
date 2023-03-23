@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 E:\FLM_PRN221\PRN_221_Goup8\PRN_221_Goup8\FootballLeagueManagement\FlmWPFApp\App.xaml
-7-511387728
+8337767988
 
-11711223320
+12210687324
 196-39845059
-DetailsMatch.xaml;Login.xaml;MainWindow.xaml;MatchForClub.xaml;MatchScheduleWindow.xaml;MatchWindow.xaml;RankingWindow.xaml;
+DetailsMatch.xaml;Login.xaml;MainWindow.xaml;MatchForClub.xaml;MatchScheduleWindow.xaml;MatchWindow.xaml;RankingWindow.xaml;UpdateClub.xaml;
 
-False
+True
 

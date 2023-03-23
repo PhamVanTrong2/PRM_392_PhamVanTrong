@@ -24,12 +24,13 @@ namespace FlmWPFApp
     {
         IAccountRepository accountRepository;
         IMatchRepository matchRepository;
+        IClubRepository clubRepository;
 
-
-        public Login(IAccountRepository _accountRepository, IMatchRepository _matchRepository)
+        public Login(IAccountRepository _accountRepository, IMatchRepository _matchRepository, IClubRepository _clubRepository)
         {
             accountRepository = _accountRepository;
             matchRepository = _matchRepository;
+            clubRepository = _clubRepository;
             InitializeComponent();
         }
 
@@ -39,24 +40,24 @@ namespace FlmWPFApp
             String password = txtPass.Password;
             Account m = accountRepository.Login(username, password);
             Account member = accountRepository.GetAccountByUserName(username);
-            if (m != null && member.Equals("admin"))
-            {
-                MatchWindow mainwindow = new MatchWindow(accountRepository, matchRepository);
-                Application.Current.Properties["member"] = m;
-                mainwindow.Show();
-            }
-            else if (m != null && !member.Equals("admin"))
-            {
-                MatchForClub window = new MatchForClub();
+            //if (m != null && member.Equals("admin"))
+            //{
+            //    MatchWindow mainwindow = new MatchWindow(accountRepository, matchRepository);
+            //    Application.Current.Properties["member"] = m;
+            //    mainwindow.Show();
+            //}
+            //else if (m != null && !member.Equals("admin"))
+            //{
+            MatchForClub window = new MatchForClub(clubRepository);
 
-                window.Show();
+            window.Show();
 
-            }
-            else if (m == null)
-            {
-                MessageBox.Show("Email or Password incorrect", "Login");
-            }
-            Close();
+            //}
+            //else if (m == null)
+            //{
+            //    MessageBox.Show("Email or Password incorrect", "Login");
+            //}
+            //Close();
         }
         private void btnMinimize_Click(object sender, RoutedEventArgs e)
         {

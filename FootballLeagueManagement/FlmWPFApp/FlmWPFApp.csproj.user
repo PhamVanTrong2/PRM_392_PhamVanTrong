@@ -22,6 +22,9 @@
     <Compile Update="RankingWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UpdateClub.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="DetailsMatch.xaml">
@@ -40,6 +43,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="RankingWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UpdateClub.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
