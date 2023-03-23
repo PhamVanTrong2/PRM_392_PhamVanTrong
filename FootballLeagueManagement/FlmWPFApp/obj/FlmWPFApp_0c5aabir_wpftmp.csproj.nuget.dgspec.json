@@ -1,0 +1,221 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\FLM_PRN221\\PRN_221_Goup8\\PRN_221_Goup8\\FootballLeagueManagement\\FlmWPFApp\\FlmWPFApp.csproj": {}
+  },
+  "projects": {
+    "E:\\FLM_PRN221\\PRN_221_Goup8\\PRN_221_Goup8\\FootballLeagueManagement\\BusinessObject\\BusinessObject.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\FLM_PRN221\\PRN_221_Goup8\\PRN_221_Goup8\\FootballLeagueManagement\\BusinessObject\\BusinessObject.csproj",
+        "projectName": "BusinessObject",
+        "projectPath": "E:\\FLM_PRN221\\PRN_221_Goup8\\PRN_221_Goup8\\FootballLeagueManagement\\BusinessObject\\BusinessObject.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "E:\\FLM_PRN221\\PRN_221_Goup8\\PRN_221_Goup8\\FootballLeagueManagement\\BusinessObject\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\FLM_PRN221\\PRN_221_Goup8\\PRN_221_Goup8\\FootballLeagueManagement\\DataAccess\\DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\FLM_PRN221\\PRN_221_Goup8\\PRN_221_Goup8\\FootballLeagueManagement\\DataAccess\\DataAccess.csproj",
+        "projectName": "DataAccess",
+        "projectPath": "E:\\FLM_PRN221\\PRN_221_Goup8\\PRN_221_Goup8\\FootballLeagueManagement\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "E:\\FLM_PRN221\\PRN_221_Goup8\\PRN_221_Goup8\\FootballLeagueManagement\\DataAccess\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "E:\\FLM_PRN221\\PRN_221_Goup8\\PRN_221_Goup8\\FootballLeagueManagement\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "E:\\FLM_PRN221\\PRN_221_Goup8\\PRN_221_Goup8\\FootballLeagueManagement\\BusinessObject\\BusinessObject.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\FLM_PRN221\\PRN_221_Goup8\\PRN_221_Goup8\\FootballLeagueManagement\\FlmWPFApp\\FlmWPFApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\FLM_PRN221\\PRN_221_Goup8\\PRN_221_Goup8\\FootballLeagueManagement\\FlmWPFApp\\FlmWPFApp.csproj",
+        "projectName": "FlmWPFApp",
+        "projectPath": "E:\\FLM_PRN221\\PRN_221_Goup8\\PRN_221_Goup8\\FootballLeagueManagement\\FlmWPFApp\\FlmWPFApp.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "E:\\FLM_PRN221\\PRN_221_Goup8\\PRN_221_Goup8\\FootballLeagueManagement\\FlmWPFApp\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0-windows7.0": {
+            "targetAlias": "net6.0-windows",
+            "projectReferences": {
+              "E:\\FLM_PRN221\\PRN_221_Goup8\\PRN_221_Goup8\\FootballLeagueManagement\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "E:\\FLM_PRN221\\PRN_221_Goup8\\PRN_221_Goup8\\FootballLeagueManagement\\BusinessObject\\BusinessObject.csproj"
+              },
+              "E:\\FLM_PRN221\\PRN_221_Goup8\\PRN_221_Goup8\\FootballLeagueManagement\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "E:\\FLM_PRN221\\PRN_221_Goup8\\PRN_221_Goup8\\FootballLeagueManagement\\DataAccess\\DataAccess.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "MaterialDesignThemes": {
+              "target": "Package",
+              "version": "[4.8.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

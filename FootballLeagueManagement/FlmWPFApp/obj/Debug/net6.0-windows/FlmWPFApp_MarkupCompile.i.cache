@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\ky_7\PRN221\PRN_221\PRN_221_Goup8\FootballLeagueManagement\FlmWPFApp\obj\Debug\net6.0-windows\
+E:\FLM_PRN221\PRN_221_Goup8\PRN_221_Goup8\FootballLeagueManagement\FlmWPFApp\obj\Debug\net6.0-windows\
 FlmWPFApp
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-D:\ky_7\PRN221\PRN_221\PRN_221_Goup8\FootballLeagueManagement\FlmWPFApp\App.xaml
-6172947027
+E:\FLM_PRN221\PRN_221_Goup8\PRN_221_Goup8\FootballLeagueManagement\FlmWPFApp\App.xaml
+7-511387728
 
-101261140685
-233-1560609134
-DetailsMatch.xaml;Login.xaml;MainWindow.xaml;MatchForClub.xaml;MatchWindow.xaml;RankingWindow.xaml;
+11711223320
+196-39845059
+DetailsMatch.xaml;Login.xaml;MainWindow.xaml;MatchForClub.xaml;MatchScheduleWindow.xaml;MatchWindow.xaml;RankingWindow.xaml;
 
-True
+False
 
