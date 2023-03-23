@@ -42,7 +42,7 @@
                             <TextBox Foreground="AliceBlue" IsReadOnly="True" Grid.Column="2" Text="{Binding Score2}"/>
                             <TextBox Foreground="DarkOrange" IsReadOnly="True" Grid.Column="3" Text="{Binding Team2}" FontSize="20"/>
                             <TextBox Foreground="AliceBlue" IsReadOnly="True" Margin="35,0,0,0" Grid.Column="4" Text="{Binding Time}"/>
-                            <ProgressBar Margin="40,0,0,0" Grid.Column="5" Value="{Binding Minutes}" Maximum="90" Minimum="0"/>
+                            <ProgressBar Height="7" Margin="40,0,0,0" Grid.Column="5" Value="{Binding Minutes}" Maximum="90" Minimum="0"/>
 
                         </Grid>
                     </DataTemplate>
@@ -50,10 +50,10 @@
             </ListBox>
 
         </Border>
-       
+
         <Image x:Name="img1" Source="D:\ky_7\PRN221\PRN_221\PRN_221_Goup8\FootballLeagueManagement\image\images.png" Margin="0,0,-2,48" Grid.Row="1"/>
 
         <Button Margin="280,139,278,16" Content="Details" Click="btnRefresh_Click" Grid.Row="1"/>
     </Grid>
-       
+
 </Window>

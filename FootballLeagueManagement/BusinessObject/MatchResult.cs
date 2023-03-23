@@ -27,7 +27,7 @@ public partial class MatchResult
 
     public string? PlayStage { get; set; }
 
-    public virtual Club Club { get; set; } = null!;
+    public virtual Player Club { get; set; } = null!;
 
     public virtual Match Match { get; set; } = null!;
 }

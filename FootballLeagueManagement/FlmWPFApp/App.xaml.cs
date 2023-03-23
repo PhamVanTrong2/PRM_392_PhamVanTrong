@@ -36,14 +36,16 @@ namespace FlmWPFApp
             services.AddSingleton<MatchWindow>();
             services.AddSingleton(typeof(IAccountRepository), typeof(AccountRepository));
             services.AddSingleton(typeof(IClubRepository), typeof(ClubRepository));
+            services.AddSingleton(typeof(IPlayerRepository), typeof(PlayerRepository));
             services.AddSingleton<Login>();
             services.AddSingleton<DetailsMatch>();
+            services.AddSingleton<PlayerWindow>();
 
 
         }
         private void OnStartup(object sender, StartupEventArgs e)
         {
-            var windowFLM = serviceProvider.GetService<Login>();
+            var windowFLM = serviceProvider.GetService<PlayerWindow>();
             windowFLM.Show();
         }
     }

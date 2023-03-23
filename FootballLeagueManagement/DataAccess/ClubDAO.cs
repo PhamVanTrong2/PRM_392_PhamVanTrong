@@ -29,9 +29,9 @@ namespace DataAccess
         }
 
 
-        public IEnumerable<Club> GetClubList()
+        public IEnumerable<Player> GetClubList()
         {
-            List<Club> Clubs;
+            List<Player> Clubs;
             try
             {
                 var myStockDB = new NhaappContext();
@@ -44,9 +44,9 @@ namespace DataAccess
             return Clubs;
         }
 
-        public Club GetClubById(int ClubId)
+        public Player GetClubById(int ClubId)
         {
-            Club Club = null;
+            Player Club = null;
             try
             {
                 var myStockDB = new NhaappContext();
@@ -57,9 +57,9 @@ namespace DataAccess
             return Club;
         }
 
-        public Club GetClubByName(String name)
+        public Player GetClubByName(String name)
         {
-            Club Club = null;
+            Player Club = null;
             try
             {
                 var myStockDB = new NhaappContext();
@@ -70,11 +70,11 @@ namespace DataAccess
             return Club;
         }
 
-        public void AddNew(Club club)
+        public void AddNew(Player club)
         {
             try
             {
-                Club _Club = GetClubById(club.ClubId);
+                Player _Club = GetClubById(club.ClubId);
                 if (_Club == null)
                 {
                     var myStockDb = new NhaappContext();
@@ -92,15 +92,15 @@ namespace DataAccess
         }
 
 
-        public void Update(Club Club)
+        public void Update(Player Club)
         {
             try
             {
-                Club c = GetClubById(Club.ClubId);
+                Player c = GetClubById(Club.ClubId);
                 if (c != null)
                 {
                     var myStockDb = new NhaappContext();
-                    myStockDb.Entry<Club>(Club).State = EntityState.Modified;
+                    myStockDb.Entry<Player>(Club).State = EntityState.Modified;
                     myStockDb.SaveChanges();
                 }
                 else
@@ -113,11 +113,11 @@ namespace DataAccess
             }
         }
 
-        public void Remove(Club Club)
+        public void Remove(Player Club)
         {
             try
             {
-                Club c = GetClubById(Club.ClubId);
+                Player c = GetClubById(Club.ClubId);
                 if (c != null)
                 {
                     var myStockDb = new NhaappContext();
@@ -133,9 +133,9 @@ namespace DataAccess
                 throw new Exception(ex.Message);
             }
         }
-        public IEnumerable<Club> Search(String keyword)
+        public IEnumerable<Player> Search(String keyword)
         {
-            List<Club> products;
+            List<Player> products;
             var myStockDB = new NhaappContext();
             try
             {

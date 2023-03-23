@@ -17,7 +17,7 @@ public partial class Account
 
     public int? ClubId { get; set; }
 
-    public virtual Club? Club { get; set; }
+    public virtual Player? Club { get; set; }
 
     public virtual ICollection<Role> Roles { get; } = new List<Role>();
 }

@@ -9,19 +9,19 @@ namespace DataAccess.Repository
 {
     public class ClubRepository : IClubRepository
     {
-        public void DeleteClub(Club club)
+        public void DeleteClub(Player club)
         => ClubDAO.Insance.Remove(club);
-        public Club GetClubById(int ClubId)
+        public Player GetClubById(int ClubId)
          => ClubDAO.Insance.GetClubById(ClubId);
-        public Club GetClubByName(string name)
+        public Player GetClubByName(string name)
           => ClubDAO.Insance.GetClubByName(name);
-        public IEnumerable<Club> GetClubs()
+        public IEnumerable<Player> GetClubs()
        => ClubDAO.Insance.GetClubList();
-        public void InsertClub(Club Club)
+        public void InsertClub(Player Club)
          => ClubDAO.Insance.AddNew(Club);
-        public IEnumerable<Club> Search(string key)
+        public IEnumerable<Player> Search(string key)
          => ClubDAO.Insance.Search(key);
-        public void UpdateClub(Club Club)
+        public void UpdateClub(Player Club)
          => ClubDAO.Insance.Update(Club);
     }
 }
