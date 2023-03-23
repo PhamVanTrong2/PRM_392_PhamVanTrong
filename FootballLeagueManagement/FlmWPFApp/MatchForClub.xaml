@@ -5,34 +5,54 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FlmWPFApp"
         mc:Ignorable="d"
-        Title="MatchForClub" Height="450" Width="800">
+         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="MatchForClub" Height="450" Width="702">
     <Grid Height="434" VerticalAlignment="Top">
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="150"/>
-            <RowDefinition Height="100"/>
+            <RowDefinition/>
+            <RowDefinition Height="187"/>
+            <RowDefinition Height="0"/>
         </Grid.RowDefinitions>
-        <ListBox>
-            <ListBox.ItemTemplate   Name="lvOrder">
-                <DataTemplate>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <TextBox Grid.Column="0" Text="{Binding}"/>
-                        <TextBox Grid.Column="1" Text="{Binding}"/>
-                        <TextBox Grid.Column="2" Text="{Binding}"/>
-                        <TextBox Grid.Column="3" Text="{Binding}"/>
-                        <ProgressBar Grid.Column="3" Value="{Binding}" Maximum="90" Minimum="0"/>
-                    </Grid>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
-        <Image x:Name="img1" Width="200"  Height="150" Grid.Row="1" Source="D:\ky_7\PRN221\PRN_221\PRN_221_Goup8\FootballLeagueManagement\image\images.png"/>
-        <TextBlock x:Name ="txtCulb" HorizontalAlignment="Left" Margin="23,25,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Grid.Row="1"/>
+        <Border  >
+            <Border.Background>
+                <ImageBrush ImageSource="D:\ky_7\PRN221\PRN_221\PRN_221_Goup8\FootballLeagueManagement\image\arsenal.png" />
+            </Border.Background>
+            <ListBox  Name="lvOrder" HorizontalContentAlignment="Stretch" Margin="40,0,40,1" >
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid >
+                            <Grid.ColumnDefinitions >
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBox IsReadOnly="True" Grid.Column="0"  Text="{Binding Team1}"/>
+                            <TextBox IsReadOnly="True" Grid.Column="1" Text="{Binding Score1}"/>
+                            <TextBox IsReadOnly="True" Grid.Column="2" Text="{Binding Score2}"/>
+                            <TextBox IsReadOnly="True" Grid.Column="3" Text="{Binding Team2}"/>
+                            <TextBox IsReadOnly="True" Margin="35,0,0,0" Grid.Column="4" Text="{Binding Time}"/>
+                            <ProgressBar Margin="40,0,0,0" Grid.Column="5" Value="{Binding Minutes}" Maximum="90" Minimum="0"/>
+                            <Button Margin="25,0,0,0" Content="Details" Grid.Column="6" Click="btnRefresh_Click"></Button>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Border>
+
+        <Image x:Name="img1" Source="D:\ky_7\PRN221\PRN_221\PRN_221_Goup8\FootballLeagueManagement\image\images.png" Margin="0,0,-2,10" Grid.Row="1"/>
+
+
     </Grid>
+
 </Window>

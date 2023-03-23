@@ -1,4 +1,5 @@
 ﻿using DataAccess.Repository;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,9 @@ namespace FlmWPFApp
     public partial class App : Application
     {
         private ServiceProvider serviceProvider;
+        public IServiceProvider ServiceProvider { get; private set; }
+
+        public IConfiguration Configuration { get; private set; }
         public App()
         {
             //Config for DependencyInjection (01)
@@ -25,14 +29,19 @@ namespace FlmWPFApp
         }
         private void ConfigureServices(ServiceCollection services)
         {
+
             services.AddSingleton(typeof(IRankingRepository), typeof(RankingRepository));
             services.AddSingleton<RankingWindow>();
             services.AddSingleton(typeof(IMatchRepository), typeof(MatchRepository));
             services.AddSingleton<MatchWindow>();
+            services.AddSingleton(typeof(IAccountRepository), typeof(AccountRepository));
+            services.AddSingleton<Login>();
+
+
         }
         private void OnStartup(object sender, StartupEventArgs e)
         {
-            var windowFLM = serviceProvider.GetService<MatchWindow>();
+            var windowFLM = serviceProvider.GetService<Login>();
             windowFLM.Show();
         }
     }

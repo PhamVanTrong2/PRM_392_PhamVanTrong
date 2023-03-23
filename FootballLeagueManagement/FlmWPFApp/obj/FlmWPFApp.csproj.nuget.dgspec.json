@@ -198,7 +198,11 @@
           "dependencies": {
             "MaterialDesignThemes": {
               "target": "Package",
-              "version": "[4.7.1, )"
+              "version": "[4.8.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             },
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",

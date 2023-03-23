@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "uVak2+592F4IgDiW0s4mDVnF5F+5+sajoIxeJhiy3y9cpBkiTpCQvsaHr5txrYdA6ooaTPRU2L5G1nVK6waORg==",
+  "dgSpecHash": "EcTcbvIk2cuEt9LPSXlc4+SohNPiXB4WYLF+RQPvZd8KXZTieaWwcp23Ey8Bdzcg13ijzUNowpnwa/wcEoBwJw==",
   "success": true,
   "projectFilePath": "D:\\ky_7\\PRN221\\PRN_221\\PRN_221_Goup8\\FootballLeagueManagement\\FlmWPFApp\\FlmWPFApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Trong\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Trong\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
-    "C:\\Users\\Trong\\.nuget\\packages\\materialdesigncolors\\2.1.1\\materialdesigncolors.2.1.1.nupkg.sha512",
-    "C:\\Users\\Trong\\.nuget\\packages\\materialdesignthemes\\4.7.1\\materialdesignthemes.4.7.1.nupkg.sha512",
+    "C:\\Users\\Trong\\.nuget\\packages\\materialdesigncolors\\2.1.2\\materialdesigncolors.2.1.2.nupkg.sha512",
+    "C:\\Users\\Trong\\.nuget\\packages\\materialdesignthemes\\4.8.0\\materialdesignthemes.4.8.0.nupkg.sha512",
     "C:\\Users\\Trong\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Trong\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Trong\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.1\\microsoft.data.sqlclient.5.0.1.nupkg.sha512",

@@ -25,6 +25,7 @@ namespace FlmWPFApp
         IAccountRepository accountRepository;
         IMatchRepository matchRepository;
 
+
         public Login(IAccountRepository _accountRepository, IMatchRepository _matchRepository)
         {
             accountRepository = _accountRepository;
@@ -38,22 +39,18 @@ namespace FlmWPFApp
             String password = txtPass.Password;
             Account m = accountRepository.Login(username, password);
             Account member = accountRepository.GetAccountByUserName(username);
-            if (m != null && !member.Equals("admin"))
+            if (m != null && member.Equals("admin"))
             {
                 MatchWindow mainwindow = new MatchWindow(accountRepository, matchRepository);
                 Application.Current.Properties["member"] = m;
                 mainwindow.Show();
             }
-            else if (m != null && member.Equals("admin"))
+            else if (m != null && !member.Equals("admin"))
             {
-                OnlyMember window = new OnlyMember(memberRepository, orderRepository, m);
-                window.txtEmail.Content = member.Email;
-                window.txtCompany.Content = member.CompanyName;
-                window.txtCountry.Content = member.Country;
-                window.txtCity.Content = member.City;
-                window.txtPassword.Content = member.Password;
+                MatchForClub window = new MatchForClub();
+
                 window.Show();
-                Application.Current.Properties["member"] = m;
+
             }
             else if (m == null)
             {
@@ -66,7 +63,9 @@ namespace FlmWPFApp
             try
             {
                 this.WindowState = WindowState.Minimized;
-            }catch(Exception ex) {
+            }
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.Message);
             }
         }

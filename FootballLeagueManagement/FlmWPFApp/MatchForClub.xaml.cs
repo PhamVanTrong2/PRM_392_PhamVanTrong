@@ -12,10 +12,12 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using System.Linq;
+
 using System.Data;
 using System.Drawing;
 using System.Windows.Navigation;
+using System.ComponentModel;
+using System.Windows.Controls.Primitives;
 
 namespace FlmWPFApp
 {
@@ -26,34 +28,40 @@ namespace FlmWPFApp
     {
         NhaappContext context = new NhaappContext();
         readonly Club club = new();
-        public MatchForClub(Club club)
+        public MatchForClub()
         {
             InitializeComponent();
-            this.club = club;
+            List<Matchs> matches = new List<Matchs>();
+            matches.Add(new Matchs { Team1 = "Arsenal", Score1 = "1", Team2 = "Liverpool", Score2 = "0", Minutes = 90, Time = "20/12/2022" });
+            matches.Add(new Matchs { Team1 = "Arsenal", Score1 = "1", Team2 = "Everton", Score2 = "1", Minutes = 90, Time = "22/12/2022" });
+            matches.Add(new Matchs { Team1 = "Arsenal", Score1 = "5", Team2 = "Brentford", Score2 = "2", Minutes = 90, Time = "24/12/2022" });
+            matches.Add(new Matchs { Team1 = "Arsenal", Score1 = "5", Team2 = "Tottenham Hotspur", Score2 = "3", Minutes = 90, Time = "26/12/2022" });
+            matches.Add(new Matchs { Team1 = "Arsenal", Score1 = "", Team2 = "Newcastle United", Score2 = "", Minutes = 0, Time = "28/12/2022" });
+            matches.Add(new Matchs { Team1 = "Arsenal", Score1 = "", Team2 = "Nottingham Forest", Score2 = "", Minutes = 0, Time = "30/12/2022" });
+
+            lvOrder.ItemsSource = matches;
+
+
+
         }
-        private void LoadSchedule()
+        public class Matchs
         {
-            club.Name = txtCulb.Text;
-
-            List<Match> matches = new List<Match>();
-            foreach (var item in context.Matches.ToList())
-            {
-                if (item.HostId == club.ClubId || item.GuestId == club.ClubId)
-                {
-                    item.Host = context.Clubs.SingleOrDefault(s => s.ClubId == item.HostId);
-                    item.Guest = context.Clubs.SingleOrDefault(s => s.ClubId == item.GuestId);
-                    matches.Add(item);
-                }
-            }
-
-
-            foreach (var item in matches)
-            {
-                
-            }
+            public String Team1 { get; set; }
+            public String Team2 { get; set; }
+            public String Score1 { get; set; }
+            public String Score2 { get; set; }
+            public long Minutes { get; set; }
+            public String Time { get; set; }
+        }
+        private void btnRefresh_Click(object sender, RoutedEventArgs e)
+        {
+            DetailsMatch dt = new DetailsMatch();   
+            dt.Show();
         }
 
+        private void lvOrder_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
 
+        }
     }
-
 }
