@@ -23,7 +23,7 @@
             <Border.Background>
                 <ImageBrush ImageSource="D:\ky_7\PRN221\PRN_221\PRN_221_Goup8\FootballLeagueManagement\image\arsenal-football-club-stadium-211427551515995098.jpg" />
             </Border.Background>
-            <ListBox  Name="lvOrder" HorizontalContentAlignment="Stretch" Margin="40,0,40,1" >
+            <ListBox  Name="lvOrder" HorizontalContentAlignment="Stretch" Margin="40,0,40,1" d:ItemsSource="{d:SampleData ItemCount=5}" >
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Grid >
@@ -35,7 +35,7 @@
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
+
                             </Grid.ColumnDefinitions>
                             <TextBox Foreground="White" IsReadOnly="True" Grid.Column="0"  Text="{Binding Team1}" FontSize="20"/>
                             <TextBox Foreground="AliceBlue" IsReadOnly="True" Grid.Column="1" Text="{Binding Score1}"/>
@@ -43,16 +43,17 @@
                             <TextBox Foreground="DarkOrange" IsReadOnly="True" Grid.Column="3" Text="{Binding Team2}" FontSize="20"/>
                             <TextBox Foreground="AliceBlue" IsReadOnly="True" Margin="35,0,0,0" Grid.Column="4" Text="{Binding Time}"/>
                             <ProgressBar Margin="40,0,0,0" Grid.Column="5" Value="{Binding Minutes}" Maximum="90" Minimum="0"/>
-                            <Button Margin="25,0,0,0" Content="Details" Grid.Column="6" Click="btnRefresh_Click"></Button>
+
                         </Grid>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
+
         </Border>
+       
+        <Image x:Name="img1" Source="D:\ky_7\PRN221\PRN_221\PRN_221_Goup8\FootballLeagueManagement\image\images.png" Margin="0,0,-2,48" Grid.Row="1"/>
 
-        <Image x:Name="img1" Source="D:\ky_7\PRN221\PRN_221\PRN_221_Goup8\FootballLeagueManagement\image\images.png" Margin="0,0,-2,10" Grid.Row="1"/>
-
-
+        <Button Margin="280,139,278,16" Content="Details" Click="btnRefresh_Click" Grid.Row="1"/>
     </Grid>
-
+       
 </Window>

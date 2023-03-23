@@ -11,10 +11,152 @@
      TextOptions.TextFormattingMode="Ideal"
      TextOptions.TextRenderingMode="Auto"
      Background="{DynamicResource MaterialDesignPaper}"
-     FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="DetailsMatch" Height="450" Width="800">
-    <Grid>
+     FontFamily="{DynamicResource MaterialDesignFont}" Height="965" Width="800">
+    <Grid Margin="0,0,10,-6">
+        <GroupBox
+               Header=""
+               Margin="10,16,-22,16">
+            <DockPanel VerticalAlignment="Top" Margin="10">
+                <Grid >
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="4*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <!--StackPanel for Label and TextBox controls-->
+
+                    <StackPanel  Orientation ="Vertical" 
+                                HorizontalAlignment="Center" Width="730" Margin="0,0,0,20" Grid.RowSpan="4">
+                        <StackPanel.Background>
+                            <ImageBrush ImageSource="D:\ky_7\PRN221_project\final_project\FootballLeagueManagement\FlmWPFApp\image\stadium.jpg" />
+                        </StackPanel.Background>
+                        <Label Name="lbTitle" Foreground="Red" FontWeight="DemiBold" 
+                               FontSize="30" Content="Club Information"  />
 
 
+                        <Label Name="lbId" Content="ClubId" Foreground="White"  FontSize="20"/>
+                        <TextBox IsReadOnly="True" Name="txtClubId" HorizontalAlignment="Stretch" 
+                                 Height="25" 
+                                 Foreground="Red"
+                                 FontSize="15"
+                                 Text="{Binding Path=ClubId, Mode=OneWay}"  
+                                 DataContext="{Binding ElementName=lvCars,    
+                                 Path=SelectedItem}" />
+
+                        <Label Name="lbMemberId" Content="Name" Foreground="White" FontSize="20"/>
+                        <TextBox Name="txtName" HorizontalAlignment="Stretch"
+                                 Height="25"
+                                 Foreground="Red"
+                                 FontSize="15"
+                                 Text="{Binding Path=Name, Mode=OneWay}"
+                                 DataContext="{Binding ElementName=lvCars, 
+                                 Path=SelectedItem}" />
+
+                        <Label Name="lbOrderDate" Content="Year Created" Foreground="White" FontSize="20"/>
+                        <TextBox Name="txtYearCreated" HorizontalAlignment="Stretch"
+                                 Height="25" 
+                                 Foreground="Red"
+                                 FontSize="15"
+                                 Text="{Binding Path=YearCreated}"
+                                 DataContext="{Binding ElementName=lvCars, 
+                                 Path=SelectedItem}" />
+
+                        <Label Name="lbRequiredDate" Content="CountryId" Foreground="White" FontSize="20"/>
+                        <TextBox Name="txtCountryId" HorizontalAlignment="Stretch"
+                                 Height="25" 
+                                 Foreground="Red"
+                                 FontSize="15"
+                                 Text="{Binding Path=CountryId}"
+                                 DataContext="{Binding ElementName=lvCars, 
+                                 Path=SelectedItem}" />
+                        <Label Name="lbRequiredDat" Content="City" Foreground="White" FontSize="20"/>
+                        <TextBox Name="txtCity" HorizontalAlignment="Stretch"
+                                 Height="25" 
+                                 Foreground="Red"
+                                 FontSize="15"
+                                 Text="{Binding Path=City}"
+                                 DataContext="{Binding ElementName=lvCars, 
+                                 Path=SelectedItem}" />
+                        <Label Name="lbFreight" Content="Address" Foreground="White" FontSize="20"/>
+                        <TextBox Name="txtAddress" HorizontalAlignment="Stretch"
+                                 Height="25"
+                                 Foreground="Red"
+                                 FontSize="15"
+                                 Text="{Binding Path=Address, Mode=OneWay}"
+                                 DataContext="{Binding ElementName=lvCars, 
+                                 Path=SelectedItem}" />
+                        <Label Name="lbWeight" Content="StadiumId" Foreground="White"  FontSize="20"/>
+                        <TextBox Name="txtStadiumId" HorizontalAlignment="Stretch"
+                                 Height="25" 
+                                 Foreground="Red"
+                                 FontSize="15"
+                                 Text="{Binding Path=StadiumId, Mode=OneWay}"
+                                 DataContext="{Binding ElementName=lvCars, 
+                                 Path=SelectedItem}" />
+                        <Label Name="lbImage" Content="LogoUrl" Foreground="White" FontSize="20"/>
+                        <TextBox Name="txtLogoUrl" HorizontalAlignment="Stretch"
+                                 Height="25" 
+                                 Foreground="Red"
+                                 FontSize="15"
+                                 Text="{Binding Path=LogoUrl, Mode=OneWay}"
+                                 DataContext="{Binding ElementName=lvCars, 
+                                 Path=SelectedItem}" />
+
+                    </StackPanel>
+                    <!--StackPanel for Button controls-->
+                    <StackPanel Orientation="Horizontal"  
+                                HorizontalAlignment="Center"  Margin="0,61,0,-93" Grid.Row="3" Width="770">
+                        <Button x:Name="btnLoad" Margin="10"  Width="81"
+                    Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                      ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" Click="btnLoad_Click">
+                            Load
+                        </Button>
+                        <Button x:Name="btnInsert" Margin="10"  Width="74" Content="Insert" 
+                                Click="btnInsert_Click"/>
+                        <Button x:Name="btnUpdate"  Margin="10" Width="73"  Content="Update" 
+                                Click="btnUpdate_Click"/>
+                        <Button x:Name="btnDelete"  Width="83" Content="Delete" 
+                                Click="btnDelete_Click"/>
+                        <Button Margin="200,0,20,0" x:Name="btnSearch"  Width="76" Content="Search" 
+                                Click="btnSearch_Click" Height="28"/>
+                        <TextBox  Height="24" x:Name="txtSearch" Width="81" />
+                    </StackPanel>
+
+                    <ListView Grid.Row="3" Name="lvCars" Width="Auto" Height="Auto" Margin="-4,191,3,-308" >
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="ClubId"  Width="100" 
+                                        DisplayMemberBinding="{Binding Path=ClubId }"/>
+                                <GridViewColumn Header="Name" Width="200"
+                                        DisplayMemberBinding="{Binding Path=Name}"/>
+                                <GridViewColumn Header="Created Year"  Width="200" 
+                                        DisplayMemberBinding="{Binding Path=YearCreated }"/>
+                                <GridViewColumn Header="CountryId"  Width="200" 
+                                        DisplayMemberBinding="{Binding Path=CountryId }"/>
+                                <GridViewColumn Header="City"  Width="200" 
+                                        DisplayMemberBinding="{Binding Path=City }"/>
+                                <GridViewColumn Header="Address"  Width="200" 
+                                        DisplayMemberBinding="{Binding Path=Address }"/>
+                                <GridViewColumn Header="StadiumId"  Width="200" 
+                                        DisplayMemberBinding="{Binding Path=StadiumId }"/>
+                                <GridViewColumn Header="LogoUrl"  Width="200" 
+                                        DisplayMemberBinding="{Binding Path=LogoUrl }"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </Grid>
+            </DockPanel>
+        </GroupBox>
+        <StackPanel Orientation="Horizontal"  
+                                HorizontalAlignment="Center"  Margin="0,814,0,10" Width="774">
+
+            <Button x:Name="btnClose" Margin="100,0,4,74"                        
+                            HorizontalAlignment="Right" VerticalAlignment="Bottom"
+                            Width="80" Content="Close" Click="btnClose_Click" Height="26"   />
+            <Button Content="Exit" HorizontalAlignment="Right" Click="btnBack_Click_Exit"  VerticalAlignment="Bottom"   Width="80" Height="26" Margin="425,1,0,74" RenderTransformOrigin="0.54,-1.262" />
+
+        </StackPanel>
     </Grid>
 </Window>
