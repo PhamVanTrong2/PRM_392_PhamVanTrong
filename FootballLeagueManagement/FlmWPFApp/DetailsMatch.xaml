@@ -5,15 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FlmWPFApp"
         mc:Ignorable="d"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}"
         Title="DetailsMatch" Height="450" Width="800">
     <Grid>
-        <Popup Name="myPopup">
-            <TextBlock Name="myPopupText" 
-                 Background="LightBlue" 
-                 Foreground="Blue">
-        Popup Text
-            </TextBlock>
-        </Popup>
+
 
     </Grid>
 </Window>
