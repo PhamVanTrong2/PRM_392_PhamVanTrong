@@ -28,7 +28,7 @@ namespace FlmWPFApp
         IMatchRepository matchRepository;
         IClubRepository clubRepository;
 
-
+        IPlayerRepository playerRepository;
         IRankingRepository rankingRepository;
         IStadiumRepository stadiumRepository;
         IMatchResultRepository matchResultRepository;
@@ -36,6 +36,7 @@ namespace FlmWPFApp
         public Login(IAccountRepository _accountRepository,
                      IMatchRepository _matchRepository,
                      IRankingRepository _rankingRepository,
+                     IPlayerRepository _playerRepository,
                      IClubRepository _clubRepository,
                      IStadiumRepository _stadiumRepository,
                      IMatchResultRepository _matchResultRepository
@@ -45,6 +46,7 @@ namespace FlmWPFApp
             matchResultRepository = _matchResultRepository;
             rankingRepository = _rankingRepository;
             accountRepository = _accountRepository;
+            playerRepository = _playerRepository;
             matchRepository = _matchRepository;
             clubRepository = _clubRepository;
             InitializeComponent();
@@ -59,7 +61,7 @@ namespace FlmWPFApp
             if (m != null && member.Username.Contains("admin"))
             {
 
-                HomeWindow mainwindow = new HomeWindow(accountRepository, matchRepository, clubRepository, rankingRepository, stadiumRepository, matchResultRepository);
+                HomeWindow mainwindow = new HomeWindow(accountRepository, matchRepository, playerRepository, clubRepository, rankingRepository, stadiumRepository, matchResultRepository);
                 Application.Current.Properties["member"] = m;
                 mainwindow.Show();
             }

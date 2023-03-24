@@ -42,8 +42,10 @@ namespace FlmWPFApp
             services.AddSingleton<MatchWindow>();
             services.AddSingleton(typeof(IAccountRepository), typeof(AccountRepository));
             services.AddSingleton(typeof(IClubRepository), typeof(ClubRepository));
+            services.AddSingleton(typeof(IPlayerRepository), typeof(PlayerRepository));
             services.AddSingleton<Login>();
             services.AddSingleton<DetailsMatch>();
+            services.AddSingleton<PlayerWindow>();
 
 
         }

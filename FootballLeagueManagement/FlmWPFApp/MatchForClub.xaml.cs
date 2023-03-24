@@ -35,11 +35,11 @@ namespace FlmWPFApp
             InitializeComponent();
             clubRepository = _clubRepository;
             List<Matchs> matches = new List<Matchs>();
-            matches.Add(new Matchs { Team1 = "Arsenal", Score1 = "1", Team2 = "Liverpool", Score2 = "0", Minutes = 90, Time = "20/12/2022" });
-            matches.Add(new Matchs { Team1 = "Arsenal", Score1 = "1", Team2 = "Everton", Score2 = "1", Minutes = 90, Time = "22/12/2022" });
-            matches.Add(new Matchs { Team1 = "Arsenal", Score1 = "5", Team2 = "Brentford", Score2 = "2", Minutes = 90, Time = "24/12/2022" });
-            matches.Add(new Matchs { Team1 = "Arsenal", Score1 = "5", Team2 = "Tottenham Hotspur", Score2 = "3", Minutes = 90, Time = "26/12/2022" });
-            matches.Add(new Matchs { Team1 = "Arsenal", Score1 = "", Team2 = "Newcastle United", Score2 = "", Minutes = 65, Time = "28/12/2022" });
+            matches.Add(new Matchs { Team1 = "Arsenal", Score1 = "0", Team2 = "Liverpool", Score2 = "0", Minutes = 65, Time = "20/12/2022" });
+            matches.Add(new Matchs { Team1 = "Arsenal", Score1 = "", Team2 = "Everton", Score2 = "", Minutes = 0, Time = "22/12/2022" });
+            matches.Add(new Matchs { Team1 = "Arsenal", Score1 = "", Team2 = "Brentford", Score2 = "", Minutes = 0, Time = "24/12/2022" });
+            matches.Add(new Matchs { Team1 = "Arsenal", Score1 = "", Team2 = "Tottenham Hotspur", Score2 = "", Minutes = 0, Time = "26/12/2022" });
+            matches.Add(new Matchs { Team1 = "Arsenal", Score1 = "", Team2 = "Newcastle United", Score2 = "", Minutes = 0, Time = "28/12/2022" });
             matches.Add(new Matchs { Team1 = "Arsenal", Score1 = "", Team2 = "Nottingham Forest", Score2 = "", Minutes = 0, Time = "30/12/2022" });
 
             lvOrder.ItemsSource = matches;

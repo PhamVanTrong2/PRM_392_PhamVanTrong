@@ -25,12 +25,13 @@ namespace FlmWPFApp
         IClubRepository clubRepository;
         IRankingRepository rankingRepository;
 
-
+        IPlayerRepository playerRepository;
 
         IStadiumRepository stadiumRepository;
         IMatchResultRepository matchResultRepository;
         public HomeWindow(IAccountRepository _accountRepository,
                      IMatchRepository _matchRepository,
+                     IPlayerRepository _playerRepository,
                      IClubRepository _clubRepository,
                      IRankingRepository _ankingRepository,
                      IStadiumRepository _stadiumRepository,
@@ -42,6 +43,7 @@ namespace FlmWPFApp
             rankingRepository = _ankingRepository;
             matchRepository = _matchRepository;
             clubRepository = _clubRepository;
+            playerRepository = _playerRepository;
             InitializeComponent();
         }
         private void button1_Click1(object sender, RoutedEventArgs e)
@@ -62,6 +64,12 @@ namespace FlmWPFApp
             dc.Show();
 
 
+        }
+
+        private void button1_Click4(object sender, RoutedEventArgs e)
+        {
+            PlayerWindow dc = new PlayerWindow(playerRepository);
+            dc.Show();
         }
     }
 }

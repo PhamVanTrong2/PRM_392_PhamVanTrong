@@ -21,7 +21,7 @@
         <TextBlock  TextWrapping="Wrap" FontSize="50" Height="50" HorizontalAlignment="Left" Margin="290,0,0,0"  Name="LoginHeading" Foreground="Blue" Text="         Premier League" VerticalAlignment="Top" FontStretch="ExtraCondensed" Width="570"/>
         <Button Foreground="BlueViolet" HorizontalAlignment="Left" Click="button1_Click1" Margin="276,65,0,0" VerticalAlignment="Top" Width="208" Height="129">
             <Button.Background>
-                <ImageBrush ImageSource="D:\ky_7\PRN221\PRN_221\PRN_221_Goup8\FootballLeagueManagement\image\match.png" Stretch="Fill" />
+                <ImageBrush ImageSource="D:\ky_7\PRN221\PRN_221\PRN_221_Goup8\FootballLeagueManagement\image\tournament.png" Stretch="Fill" />
             </Button.Background>
         </Button>
 
@@ -40,8 +40,27 @@
         </Button>
         <TextBlock Foreground="White" FontSize="20" Margin="291,383,451,9">Club Management</TextBlock>
         <TextBlock Foreground="White" FontSize="20" Margin="290,207,433,175"><Run Text="Match Management"/></TextBlock>
-        <TextBlock Foreground="White" FontSize="20" Margin="635,207,10,158"><Run Text="Ranking Of Premier 
+        <TextBlock Foreground="White" FontSize="20" Margin="635,207,10,183"><Run Text="Ranking Of Premier 
 League"/></TextBlock>
+        <Button HorizontalAlignment="Left" Click="button1_Click2" Margin="635,65,0,0" VerticalAlignment="Top" Width="207" Height="129">
+
+            <Button.Background>
+                <ImageBrush ImageSource="D:\ky_7\PRN221\PRN_221\PRN_221_Goup8\FootballLeagueManagement\image\podium (1).png" Stretch="Fill" />
+            </Button.Background>
+        </Button>
+        <Button HorizontalAlignment="Left" Click="button1_Click2" Margin="635,256,0,0" VerticalAlignment="Top" Width="207" Height="130">
+
+            <Button.Background>
+                <ImageBrush ImageSource="D:\ky_7\PRN221\PRN_221\PRN_221_Goup8\FootballLeagueManagement\image\podium (1).png" Stretch="Fill" />
+            </Button.Background>
+        </Button>
+        <TextBlock Foreground="White" FontSize="20" Margin="645,383,0,23"><Run Text="Player Management"/></TextBlock>
+        <Button HorizontalAlignment="Left" Click="button1_Click4" Margin="635,264,0,0" VerticalAlignment="Top" Width="207" Height="114">
+
+            <Button.Background>
+                <ImageBrush ImageSource="D:\ky_7\PRN221\PRN_221\PRN_221_Goup8\FootballLeagueManagement\image\soccer-player.png" Stretch="Fill" />
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Window>

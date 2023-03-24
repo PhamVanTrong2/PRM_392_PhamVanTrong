@@ -33,7 +33,7 @@
                            />
                 </StackPanel>
 
-                <ListView Grid.Row="2" Name="lvMatches" Width="Auto" Height="200" SelectionChanged="lvMatches_SelectionChanged">
+                <ListView Grid.Row="2"  Foreground="AliceBlue" Name="lvMatches" Width="Auto" Height="200" SelectionChanged="lvMatches_SelectionChanged" d:ItemsSource="{d:SampleData ItemCount=5}">
                     <ListView.View>
                         <GridView>
                             <GridViewColumn Header="Match ID"  Width="120" 
