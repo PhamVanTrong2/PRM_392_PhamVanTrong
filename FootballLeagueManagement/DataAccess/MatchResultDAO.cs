@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessObject;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,6 +25,22 @@ namespace DataAccess
                 }
                 return instance;
             }
+        }
+
+        public IEnumerable<MatchResult> GetMatchResult()
+        {
+            List<MatchResult> matches;
+            try
+            {
+                var FlmDB = new NhaappContext();
+                matches = FlmDB.MatchResults.ToList();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            return matches;
         }
     }
 }

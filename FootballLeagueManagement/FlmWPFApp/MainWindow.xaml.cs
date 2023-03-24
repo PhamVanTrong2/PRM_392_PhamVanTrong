@@ -28,10 +28,14 @@ namespace FlmWPFApp
             rankingRepository = repository;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            RankingWindow ranking = new RankingWindow(rankingRepository);
-            ranking.Show();
+
+        }
+
+        private void btnMatchSchedule_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

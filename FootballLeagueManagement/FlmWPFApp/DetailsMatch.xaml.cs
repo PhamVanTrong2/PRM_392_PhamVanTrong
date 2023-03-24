@@ -29,13 +29,13 @@ namespace FlmWPFApp
             clubRepository = clubRepositor;
         }
 
-        private Player GetClubObject()
+        private Club GetClubObject()
         {
-            Player nember = null;
+            Club nember = null;
 
             try
             {
-                nember = new Player
+                nember = new Club
                 {
                     ClubId = int.Parse(txtClubId.Text),
                     Name = txtName.Text,
@@ -76,7 +76,7 @@ namespace FlmWPFApp
         {
             try
             {
-                Player nember = GetClubObject();
+                Club nember = GetClubObject();
                 clubRepository.InsertClub(nember);
                 LoadnemberList();
                 MessageBox.Show($"{nember.Name} inserted successfully ", "Insert nember");
@@ -90,9 +90,7 @@ namespace FlmWPFApp
 
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
-
-            Player member = (Player)lvCars.SelectedItems[0];
-
+            Club member = (Club)lvCars.SelectedItems[0];
             UpdateClub updateMember = new UpdateClub(member, clubRepository);
             updateMember.txtClubName.Text = member.Name;
             updateMember.txtYearCreated.Text = member.YearCreated;
@@ -110,7 +108,7 @@ namespace FlmWPFApp
         {
             try
             {
-                Player nember = GetClubObject();
+                Club nember = GetClubObject();
                 clubRepository.DeleteClub(nember);
                 LoadnemberList();
                 MessageBox.Show($"{nember.Name} Delete successfully ", "Delete nember");

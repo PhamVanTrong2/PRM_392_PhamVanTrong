@@ -9,5 +9,5 @@ public partial class Stadium
 
     public string Name { get; set; } = null!;
 
-    public virtual ICollection<Player> Clubs { get; } = new List<Player>();
+    public virtual ICollection<Club> Clubs { get; } = new List<Club>();
 }

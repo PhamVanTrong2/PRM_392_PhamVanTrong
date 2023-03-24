@@ -25,9 +25,9 @@ public partial class Match
 
     public virtual ICollection<Goal> Goals { get; } = new List<Goal>();
 
-    public virtual Player Guest { get; set; } = null!;
+    public virtual Club Guest { get; set; } = null!;
 
-    public virtual Player Host { get; set; } = null!;
+    public virtual Club Host { get; set; } = null!;
 
     public virtual ICollection<MatchResult> MatchResults { get; } = new List<MatchResult>();
 

@@ -19,5 +19,5 @@ public partial class Ranking
 
     public int? GoalDifference { get; set; }
 
-    public virtual Player Club { get; set; } = null!;
+    public virtual Club Club { get; set; } = null!;
 }

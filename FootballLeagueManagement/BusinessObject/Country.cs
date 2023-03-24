@@ -11,7 +11,7 @@ public partial class Country
 
     public string? ShortName { get; set; }
 
-    public virtual ICollection<Player> Clubs { get; } = new List<Player>();
+    public virtual ICollection<Club> Clubs { get; } = new List<Club>();
 
     public virtual ICollection<Referee> Referees { get; } = new List<Referee>();
 }

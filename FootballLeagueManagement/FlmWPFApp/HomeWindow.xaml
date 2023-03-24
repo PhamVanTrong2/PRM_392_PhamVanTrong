@@ -1,0 +1,47 @@
+﻿<Window x:Class="FlmWPFApp.HomeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FlmWPFApp"
+        mc:Ignorable="d"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="HomeWindow" Height="450" Width="935">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="D:\ky_7\PRN221\PRN_221\PRN_221_Goup8\FootballLeagueManagement\image\ok2.png" />
+        </Grid.Background>
+
+        <TextBlock  TextWrapping="Wrap" FontSize="50" Height="50" HorizontalAlignment="Left" Margin="290,0,0,0"  Name="LoginHeading" Foreground="Blue" Text="         Premier League" VerticalAlignment="Top" FontStretch="ExtraCondensed" Width="570"/>
+        <Button Foreground="BlueViolet" HorizontalAlignment="Left" Click="button1_Click1" Margin="276,65,0,0" VerticalAlignment="Top" Width="208" Height="129">
+            <Button.Background>
+                <ImageBrush ImageSource="D:\ky_7\PRN221\PRN_221\PRN_221_Goup8\FootballLeagueManagement\image\match.png" Stretch="Fill" />
+            </Button.Background>
+        </Button>
+
+        <Button HorizontalAlignment="Left" Click="button1_Click2" Margin="635,65,0,0" VerticalAlignment="Top" Width="207" Height="129">
+
+            <Button.Background>
+                <ImageBrush ImageSource="D:\ky_7\PRN221\PRN_221\PRN_221_Goup8\FootballLeagueManagement\image\podium (1).png" Stretch="Fill" />
+            </Button.Background>
+        </Button>
+        <Button  Foreground="BlueViolet" HorizontalAlignment="Left" Click="button1_Click3" Margin="276,264,0,0" VerticalAlignment="Top" Width="208" Height="114">
+
+            <Button.Background>
+                <ImageBrush ImageSource=" D:\ky_7\PRN221\PRN_221\PRN_221_Goup8\FootballLeagueManagement\image\icon1.png" Stretch="Fill" />
+            </Button.Background>
+
+        </Button>
+        <TextBlock Foreground="White" FontSize="20" Margin="291,383,451,9">Club Management</TextBlock>
+        <TextBlock Foreground="White" FontSize="20" Margin="290,207,433,175"><Run Text="Match Management"/></TextBlock>
+        <TextBlock Foreground="White" FontSize="20" Margin="635,207,10,158"><Run Text="Ranking Of Premier 
+League"/></TextBlock>
+
+    </Grid>
+</Window>

@@ -28,7 +28,7 @@ namespace FlmWPFApp
     public partial class MatchForClub : Window
     {
         NhaappContext context = new NhaappContext();
-        readonly Player club = new();
+        readonly Club club = new();
         IClubRepository clubRepository;
         public MatchForClub(IClubRepository _clubRepository)
         {
@@ -58,15 +58,12 @@ namespace FlmWPFApp
         }
         private void btnRefresh_Click(object sender, RoutedEventArgs e)
         {
-            DetailsMatch dt = new DetailsMatch(clubRepository);
-            dt.Show();
+
         }
 
         private void lvOrder_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
-
-
     }
 }

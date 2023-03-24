@@ -10,16 +10,19 @@
     <Compile Update="DetailsMatch.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="HomeWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Login.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="MatchForClub.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="MatchWindow.xaml.cs">
+    <Compile Update="MatchScheduleWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="PlayerWindow.xaml.cs">
+    <Compile Update="MatchWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="RankingWindow.xaml.cs">
@@ -28,12 +31,12 @@
     <Compile Update="UpdateClub.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="UpdatePlayer.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="DetailsMatch.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="HomeWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Login.xaml">
@@ -45,19 +48,16 @@
     <Page Update="MatchForClub.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="MatchWindow.xaml">
+    <Page Update="MatchScheduleWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="PlayerWindow.xaml">
+    <Page Update="MatchWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="RankingWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UpdateClub.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="UpdatePlayer.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

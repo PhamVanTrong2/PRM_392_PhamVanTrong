@@ -9,13 +9,13 @@ namespace DataAccess.Repository
 {
     public interface IClubRepository
     {
-        IEnumerable<Player> GetClubs();
-        Player GetClubById(int ClubId);
+        IEnumerable<Club> GetClubs();
+        Club GetClubById(int ClubId);
 
-        Player GetClubByName(String email);
-        void InsertClub(Player club);
-        void UpdateClub(Player Club);
-        void DeleteClub(Player Club);
-        IEnumerable<Player> Search(String key);
+        Club GetClubByName(String email);
+        void InsertClub(Club club);
+        void UpdateClub(Club Club);
+        void DeleteClub(Club Club);
+        IEnumerable<Club> Search(String key);
     }
 }

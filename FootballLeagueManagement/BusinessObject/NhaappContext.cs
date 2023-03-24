@@ -20,7 +20,7 @@ public partial class NhaappContext : DbContext
 
     public virtual DbSet<Card> Cards { get; set; }
 
-    public virtual DbSet<Player> Clubs { get; set; }
+    public virtual DbSet<Club> Clubs { get; set; }
 
     public virtual DbSet<Country> Countries { get; set; }
 
@@ -110,7 +110,7 @@ public partial class NhaappContext : DbContext
                 .HasConstraintName("FK_Card_Player");
         });
 
-        modelBuilder.Entity<Player>(entity =>
+        modelBuilder.Entity<Club>(entity =>
         {
             entity.ToTable("Club");
 
